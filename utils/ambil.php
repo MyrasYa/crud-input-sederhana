@@ -1,7 +1,7 @@
 <?php
     // intelliphense error handle
 
-/** @var mysqli $koneksi */
+// /** @var mysqli $koneksi */
 
 
 // hubungin ke koneksi database yang sudah di set di folder config/koneksi.php dan main.php

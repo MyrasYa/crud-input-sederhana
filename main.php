@@ -10,11 +10,13 @@
 <body>
     <h1>CRUD BASIC RASYA AKBAR MUHAMMAD ZEIN_24552010015_A1</h1>
     <div class="input">
-        <label for="name">Masukkan Nama</label>
-        <input type="text" name="nama" id="nama">
-        <label for="name">Masukkan Nilai</label>
-        <input type="number" name="nilai" id="nilai">
-        <input type="submit" value="Kirim Data">
+        <form action="utils/tambah.php" method="POST">
+            <label for="nama">Masukkan Nama</label>
+            <input type="text" name="nama" id="nama">
+            <label for="nilai">Masukkan Nilai</label>
+            <input type="number" name="nilai" id="nilai">
+            <input type="submit" name="submit" value="Kirim Data">
+        </form>
     </div>
 
     <div class="tabel">
@@ -26,8 +28,14 @@
                 <th>Grade</th>
                 <th>Status</th>
             </tr>
-            <?php 
+            <?php
+            // ambil utils ambil.php
             require __DIR__ . '/utils/ambil.php';
+
+            // agar tambah.php ke trigger hanya saat tombol di klik
+            if (isset($_POST['submit'])) {
+                require __DIR__ . '/utils/tambah.php';
+            }
 
 
             if (!empty($data)) {
