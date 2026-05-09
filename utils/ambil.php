@@ -1,11 +1,13 @@
 <?php
-    // intelliphense error handle
+// intelliphense error handle
 
 // /** @var mysqli $koneksi */
 
 
 // hubungin ke koneksi database yang sudah di set di folder config/koneksi.php dan main.php
 require __DIR__ . '/../config/koneksi.php';
+
+header('Content-Type: application/json');
 
 // logic querry database
 $query = "SELECT * FROM students ORDER BY id DESC";
@@ -21,8 +23,18 @@ $data = [];
 
 
 // ngecek apakah hasil query kosong atau tidak
-if ($result &&  mysqli_num_rows($result) > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $data[] = $row;
+if ($result) {
+     if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
     }
+        echo json_encode($data);
+
+} else {
+    echo json_encode([
+        "success" => false,
+        "message" => mysqli_error($koneksi)
+    ]);
 }
+

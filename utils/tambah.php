@@ -5,6 +5,7 @@ require __DIR__ . '/../config/koneksi.php';
 // kirim data saat klik submit
 
 // ngambil values input dari input nama&nilai
+$id = $_POST['id'];
 $nama = $_POST['nama'];
 $nilai = $_POST['nilai'];
 
@@ -15,7 +16,6 @@ if ($nama == "" || $nilai == "") {
     exit;
 }
 
-
 // logic grade
 if ($nilai >= 90) $grade = "A";
 else if ($nilai >= 80) $grade = "B";
@@ -25,7 +25,6 @@ else $grade = "D";
 // logic status
 if ($nilai >= 80) $status = "Lulus";
 else $status = "Tidak Lulus";
-
 
 // =========================
 // SQL YANG SUDAH AMAN
