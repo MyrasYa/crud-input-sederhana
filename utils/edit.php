@@ -17,5 +17,4 @@ $data = mysqli_fetch_assoc($result);
 // ngirim hasil ebrupa json
 echo json_encode($data);
 
-
 ?>
