@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  gap: 30px;
+  margin-left: 40px;
+}
+
+/* h1 {
+  max-width: 900px;
+  font-weight: 300;
+  text-align: start;
+  font-size: 30px;
+} */
+
+h2 {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+.input {
+  background-color: rgba(0, 0, 0, 0);
+  width: 500px;
+  /* border-radius: 15px; */
+  padding: 15px 5px 25px 15px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.166);
+  /* padding-top: 23px; */
+  height: auto;
+}
+
+.input form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input form label {
+  align-self: self-start;
+  margin-left: 20px;
+  margin-bottom: 3px;
+  font-weight: 200;
+}
+
+.input form input {
+  width: 100%;
+  max-width: 400px;
+  border: 0.5px solid rgba(0, 0, 0, 0.283);
+  outline: none;
+  border-radius: 500px;
+  border-top-right-radius: 0;
+  padding: 5px 15px;
+  margin-right: 40px;
+}
+
+.input form label {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.input form .input_submit {
+  background-color: black;
+  color: white;
+  margin-top: 25px;
+  max-width: 150px;
+  height: 38px;
+  padding: 9px;
+  align-self: flex-start;
+  margin-left: 20px;
+  font-weight: 600;
+  padding-bottom: 10px;
+  box-shadow: 0 0px 9px rgb(56, 175, 255);
+  border-inline: 5px solid rgba(0, 153, 255, 0.675);
+  transition: 0.2s ease-in-out;
+}
+
+.input form .input_submit:hover {
+    transform: translateY(-5px);
+}
+
+.tabel {
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0);
+  /* border-radius: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.166);
+}
+
+.tabel table {
+  width: 100%;
+  text-align: center;
+  border-radius: 20px;
+  border: 0px solid rgba(0, 0, 0, 0.172);
+  padding: 20px 30px;
+}
+
+table th {
+  padding: 15px 10px;
+  border-radius: 200px;
+}
+
+table td {
+  padding: 10px 7px;
+  border-radius: 200px;
+  background-color: rgba(0, 0, 0, 0.054);
+  font-weight: 200;
+}
+
+#tabelBody tr td button {
+  padding: 3px 15px;
+  outline: none;
+  border: none;
+  border-radius: 200px;
+  font-weight: 500;
+  border-bottom: 5px solid rgb(117, 117, 255);
+}
+
+#tabelBody tr td button:first-child,
+#popupEdit button:first-of-type {
+  background-color: rgba(0, 153, 255, 0.675);
+}
+
+#tabelBody tr td button:last-child,
+#popupEdit button:last-of-type {
+  background-color: rgba(255, 0, 0, 0.675);
+}
+
+#popupEdit {
+  display: none;
+  position: fixed;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  gap: 10px;
+}
+
+#popupEdit input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#popupEdit button {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

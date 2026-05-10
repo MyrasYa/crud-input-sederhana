@@ -20,7 +20,10 @@ async function editStudent(id) {
     document.getElementById("edit_nilai").value = hasil.nilai 
 
     // ubah style pop up agar muncul
-    document.getElementById("popupEdit").style.display = "block"
+    document.getElementById("popupEdit").style.display = "flex";
+    document.getElementById("popupEdit").style.flexDirection = "coloumn";
+    
+
 
     // cek console data json hasil query be php
     console.log("Edit ID:", hasil);
