@@ -10,7 +10,7 @@ require __DIR__ . '/../config/koneksi.php';
 header('Content-Type: application/json');
 
 // logic querry database
-$query = "SELECT * FROM students ORDER BY id DESC";
+$query = "SELECT * FROM students ORDER BY id ASC";
 
 // simpan data hasil query ke dalam variabel
 $result = mysqli_query($koneksi, $query);
